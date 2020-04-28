@@ -1,0 +1,10 @@
+<p>product-shell works!</p>
+
+<app-product-list
+  [currentProductId]="currentProductId$ | async"
+  [displayProductCode]="displayCode$ | async"
+  [products]="products$ | async"
+  (selected)="selectProduct($event)"
+  (toggleShow)="showCode()"
+
+></app-product-list>

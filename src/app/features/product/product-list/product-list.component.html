@@ -1,0 +1,10 @@
+<p>product-list works!</p>
+
+<div *ngFor="let product of products">
+  <div>
+    <button type="button" (click)="selectProduct(product)">Select</button>
+    {{product.productName}}<span *ngIf="displayProductCode"> {{product.productCode}}</span>
+    <span *ngIf="(currentProductId)===product.id">SELECTED</span>
+  </div>
+</div>
+<input type="checkbox" (change)="showCode($event.target.checked)" [checked]="displayProductCode" />Show product code
